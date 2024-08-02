@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'OpenDI',
+  title: 'OpenDI - JSON Schema (DRAFT)',
   tagline: '',
   favicon: 'img/opendi-icon-small.png',
 
@@ -72,7 +72,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'landingSidebar',
             position: 'left',
-            label: 'Home',
+            label: 'JSON Schema (DRAFT)',
           },
           {
             type: 'docsVersionDropdown',
@@ -100,7 +100,7 @@ const config = {
             items: [
               {
                 label: 'Home',
-                to: '/',
+                to: 'http://opendi.org',
               },
               {
                 label: 'Roles and User Stories',
