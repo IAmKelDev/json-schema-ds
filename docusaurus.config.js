@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'OpenDI',
+  title: 'OpenDI - JSON Schema (DRAFT)',
   tagline: '',
   favicon: 'img/opendi-icon-small.png',
 
@@ -44,8 +44,17 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/IAmKelDev/json-schema-ds/tree/dev/',
+
+          //Set up "Edit this page" option at the bottom of each page
+          //Available params given here: https://docusaurus.io/docs/next/api/plugins/@docusaurus/plugin-content-docs#EditUrlFunction
+          editUrl: ({version, versionDocsDirPath, docPath}) => {
+            if (version !== 'current') //Only allow page editing when on the "Next" (dev) version
+            {
+              return undefined;
+            }
+            return "https://github.com/IAmKelDev/json-schema-ds/tree/dev/" + versionDocsDirPath + "/" + docPath;
+          },
+
           routeBasePath: '/'
         },
         theme: {
@@ -72,7 +81,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'landingSidebar',
             position: 'left',
-            label: 'Home',
+            label: 'JSON Schema (DRAFT)',
           },
           {
             type: 'docsVersionDropdown',
@@ -100,7 +109,7 @@ const config = {
             items: [
               {
                 label: 'Home',
-                to: '/',
+                to: 'http://opendi.org',
               },
               {
                 label: 'Roles and User Stories',

@@ -1,41 +1,39 @@
-# Website
+![](./docs/img/opendi-icon.png)
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+# Welcome to OpenDI
 
-### Installation
+Welcome! You're currently browsing source files for the OpenDI public website - JSON Schema.
 
-```
-$ yarn
-```
+## Get started
 
-### Local Development
+If you're looking to explore the standards or learn more about the project, [start on the website.](https://opendi-org.github.io/landing-site/)  
+If you'd like to go to the JSON Schema website directly, use [this direct link](https://opendi-org.github.io/json-schema)
 
-```
-$ yarn start
-```
+If you'd like to contribute to OpenDI, check the [contribution guide.](https://opendi-org.github.io/landing-site/How%20To%20Contribute/)
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Want to engage in community discussion? Join the [OpenDI Discord server!](https://discord.gg/FtAX3JStJz)
 
-### Build
+## Maintenance
 
-```
-$ yarn build
-```
+Looking for notes about local deployment for testing, GitHub Actions setup, Pages Deployment, etc.?  
+View the [Maintainer Guide, here.](./Maintainer%20Guide/README.md)
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+# Getting up to speed
 
-### Deployment
+A good way to get familiar with the schema is to browse some test data. See `test-data.json`.  
+Ideally, clone the repo to a dev environment that has JSON Schema integration, like VS Code. See instructions below.
 
-Using SSH:
+Alternatively, browse the docs on the OpenDI website.  
+These docs pull information directly from the schema and presents it in a more readable format. 
 
-```
-$ USE_SSH=true yarn deploy
-```
+## VS Code
 
-Not using SSH:
+1. Clone the repository to a local folder.
+2. Open the repository folder VS Code.
+3. In VS Code, open `test-data.json`.
+4. Hover over portions of the test data to see popups for the title and description information included in the schema.
+5. Try adding to the test data. Use the [Problems Panel](https://code.visualstudio.com/docs/editor/editingevolved#_errors-warnings) to see what changes would bring your data into schema compliance (missing/malformed fields, etc).
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+# Resources Used
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The OpenDI JSON Schema definition is based on the Schema specifications managed by [JSON-Schema.org](https://json-schema.org/).
